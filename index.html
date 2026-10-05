@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>安徒生童话阅读地图</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 首页：童话地图 -->
+<div id="mapScreen" class="screen active">
+  <header class="map-header">
+    <h1>安徒生童话阅读地图</h1>
+    <p class="map-sub">点亮 13 座小岛，收集属于你的童话书</p>
+  </header>
+  <div id="islandGrid" class="island-grid"></div>
+  <div class="map-footer">
+    <div id="collectionBar" class="collection-bar"></div>
+  </div>
+</div>
+
+<!-- 故事页 -->
+<div id="storyScreen" class="screen">
+  <header class="story-header">
+    <button id="backBtn" class="back-btn">← 返回地图</button>
+    <h2 id="storyTitle"></h2>
+    <div id="progressDots" class="progress-dots"></div>
+  </header>
+
+  <main id="stageArea" class="stage-area"></main>
+
+  <footer class="story-footer">
+    <button id="retryBtn" class="retry-btn">再答一次</button>
+    <button id="nextBtn" class="next-btn">下一关 →</button>
+  </footer>
+</div>
+
+<!-- 结束页 -->
+<div id="endScreen" class="screen">
+  <div class="end-card">
+    <h2 id="endTitle"></h2>
+    <div id="endBadges" class="end-badges"></div>
+    <p id="endText"></p>
+    <button id="endBackBtn" class="next-btn">回到地图</button>
+  </div>
+</div>
+
+<!-- 通用弹层 -->
+<div id="toast" class="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
